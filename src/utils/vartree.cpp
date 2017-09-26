@@ -2,6 +2,7 @@
 // Created by ben on 9/26/17.
 //
 
+#include <stack>
 #include "vartree.hpp"
 
 CNFClauseTree::CNFClauseTree(var v) {
@@ -67,14 +68,60 @@ bool CNFClauseTree::add_var(var v) {
 int CNFClauseTree::size() {
     // How many nodes are we tracking? 0, 1 or 2?
     int nodeSize = (neg() ? 1 : 0) + (pos() ? 1 : 0);
-    return nodeSize + (left  == nullptr ? 0 : left -> size())
-                    + (right == nullptr ? 0 : right-> size());
+    return nodeSize + (has_left()  ?  left -> size() : 0)
+                    + (has_right() ?  right-> size() : 0);
+}
+
+
+int CNFClauseTree::cnf_adjusted_size() {
+    int nodeSize = can_cancel() ? 0 : 1;
+    return nodeSize + (has_left()  ? left -> cnf_adjusted_size() : 0)
+                    + (has_right() ? right-> cnf_adjusted_size() : 0);
 }
 
 var *CNFClauseTree::in_order() {
+    // TODO
     int s = size();
     var* result = new var[s];
-
-
     return nullptr;
+}
+
+var *CNFClauseTree::cnf_adjusted_in_order(){
+    // TODO
+    int s = cnf_adjusted_size(); // size of result
+    int i = 0;                   // current index to update in result
+    var* result = new var[s];    // array to return
+
+    std::stack<CNFClauseTree*> next_tree;
+    CNFClauseTree* t = this;
+
+    // Push left trees
+    while(t != nullptr){
+        next_tree.push(t);
+        t = t->get_left();
+    }
+
+    while(next_tree.size() > 0){
+        // Pop off the top of the stack
+        t = next_tree.top();
+        next_tree.pop();
+
+
+
+        if (t->neg()) {
+            result[i++] = -1 * t->get_value();
+        } if (t->pos()) {
+            result[i++] = t->get_value();
+        }
+
+        // Push Left of Right
+        if (t -> has_right()) {
+            t = t->get_right();
+            while(t != nullptr){
+                next_tree.push(t);
+                t = t->get_left();
+            }
+        }
+    }
+    return result;
 }

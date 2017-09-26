@@ -11,7 +11,9 @@
 
 #ifndef SAT_SOLVER_VARTREE_HPP
 #define SAT_SOLVER_VARTREE_HPP
+
 #include "prims.hpp"
+#include <iostream>
 
 #define NEG 1
 #define POS 2
@@ -59,12 +61,30 @@ public:
      */
     int size();
 
+    /**
+     * Like size, but don't include cancellable nodes
+     * @return
+     */
+    int cnf_adjusted_size();
+
     uint64_t get_value() { return value; }
     uint64_t get_flags() { return flags; }
     CNFClauseTree* get_left(){ return left; }
     CNFClauseTree* get_right() {return right;}
+    bool has_left(){ return left != nullptr; }
+    bool has_right(){ return right != nullptr; }
 
+    /**
+     * @return in order list of all vars. NOTE that these are ordered by the
+     * absolute value
+     */
     var* in_order();
+
+    /**
+     * @return in order list of all vars in this clause with cancellations
+     * removed. NOTE that these are ordered by the absolute value
+     */
+    var* cnf_adjusted_in_order();
 
 };
 
