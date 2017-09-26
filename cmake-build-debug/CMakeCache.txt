@@ -178,6 +178,9 @@ ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 
+//Dependencies for target
+codeToTest_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 sat_solver_BINARY_DIR:STATIC=/home/ben/CLionProjects/sat-solver/cmake-build-debug
 

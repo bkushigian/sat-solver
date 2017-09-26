@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/utils_tests.dir/tests/utils_tests/util_tests_main.cpp.o CMakeFiles/utils_tests.dir/tests/utils_tests/vartree_test.cpp.o CMakeFiles/utils_tests.dir/src/utils/vartree.cpp.o CMakeFiles/utils_tests.dir/src/utils/llist.cpp.o  -o utils_tests -lgtest -lgtest_main -lrt -lpthread libcodeToTest.a 

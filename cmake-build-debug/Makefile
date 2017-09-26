@@ -123,6 +123,32 @@ sat_solver/fast:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/build
 .PHONY : sat_solver/fast
 
+#=============================================================================
+# Target rules for targets named utils_tests
+
+# Build rule for target.
+utils_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 utils_tests
+.PHONY : utils_tests
+
+# fast build rule for target.
+utils_tests/fast:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/build
+.PHONY : utils_tests/fast
+
+#=============================================================================
+# Target rules for targets named codeToTest
+
+# Build rule for target.
+codeToTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 codeToTest
+.PHONY : codeToTest
+
+# fast build rule for target.
+codeToTest/fast:
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/build
+.PHONY : codeToTest/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -184,6 +210,8 @@ src/utils/llist.o: src/utils/llist.cpp.o
 # target to build an object file
 src/utils/llist.cpp.o:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/llist.cpp.o
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/utils/llist.cpp.o
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/src/utils/llist.cpp.o
 .PHONY : src/utils/llist.cpp.o
 
 src/utils/llist.i: src/utils/llist.cpp.i
@@ -193,6 +221,8 @@ src/utils/llist.i: src/utils/llist.cpp.i
 # target to preprocess a source file
 src/utils/llist.cpp.i:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/llist.cpp.i
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/utils/llist.cpp.i
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/src/utils/llist.cpp.i
 .PHONY : src/utils/llist.cpp.i
 
 src/utils/llist.s: src/utils/llist.cpp.s
@@ -202,34 +232,9 @@ src/utils/llist.s: src/utils/llist.cpp.s
 # target to generate assembly for a file
 src/utils/llist.cpp.s:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/llist.cpp.s
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/utils/llist.cpp.s
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/src/utils/llist.cpp.s
 .PHONY : src/utils/llist.cpp.s
-
-src/utils/prims.o: src/utils/prims.cpp.o
-
-.PHONY : src/utils/prims.o
-
-# target to build an object file
-src/utils/prims.cpp.o:
-	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/prims.cpp.o
-.PHONY : src/utils/prims.cpp.o
-
-src/utils/prims.i: src/utils/prims.cpp.i
-
-.PHONY : src/utils/prims.i
-
-# target to preprocess a source file
-src/utils/prims.cpp.i:
-	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/prims.cpp.i
-.PHONY : src/utils/prims.cpp.i
-
-src/utils/prims.s: src/utils/prims.cpp.s
-
-.PHONY : src/utils/prims.s
-
-# target to generate assembly for a file
-src/utils/prims.cpp.s:
-	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/prims.cpp.s
-.PHONY : src/utils/prims.cpp.s
 
 src/utils/vartree.o: src/utils/vartree.cpp.o
 
@@ -238,6 +243,8 @@ src/utils/vartree.o: src/utils/vartree.cpp.o
 # target to build an object file
 src/utils/vartree.cpp.o:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/vartree.cpp.o
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/utils/vartree.cpp.o
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/src/utils/vartree.cpp.o
 .PHONY : src/utils/vartree.cpp.o
 
 src/utils/vartree.i: src/utils/vartree.cpp.i
@@ -247,6 +254,8 @@ src/utils/vartree.i: src/utils/vartree.cpp.i
 # target to preprocess a source file
 src/utils/vartree.cpp.i:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/vartree.cpp.i
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/utils/vartree.cpp.i
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/src/utils/vartree.cpp.i
 .PHONY : src/utils/vartree.cpp.i
 
 src/utils/vartree.s: src/utils/vartree.cpp.s
@@ -256,7 +265,69 @@ src/utils/vartree.s: src/utils/vartree.cpp.s
 # target to generate assembly for a file
 src/utils/vartree.cpp.s:
 	$(MAKE) -f CMakeFiles/sat_solver.dir/build.make CMakeFiles/sat_solver.dir/src/utils/vartree.cpp.s
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/src/utils/vartree.cpp.s
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/src/utils/vartree.cpp.s
 .PHONY : src/utils/vartree.cpp.s
+
+tests/utils_tests/util_tests_main.o: tests/utils_tests/util_tests_main.cpp.o
+
+.PHONY : tests/utils_tests/util_tests_main.o
+
+# target to build an object file
+tests/utils_tests/util_tests_main.cpp.o:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_tests/util_tests_main.cpp.o
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/tests/utils_tests/util_tests_main.cpp.o
+.PHONY : tests/utils_tests/util_tests_main.cpp.o
+
+tests/utils_tests/util_tests_main.i: tests/utils_tests/util_tests_main.cpp.i
+
+.PHONY : tests/utils_tests/util_tests_main.i
+
+# target to preprocess a source file
+tests/utils_tests/util_tests_main.cpp.i:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_tests/util_tests_main.cpp.i
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/tests/utils_tests/util_tests_main.cpp.i
+.PHONY : tests/utils_tests/util_tests_main.cpp.i
+
+tests/utils_tests/util_tests_main.s: tests/utils_tests/util_tests_main.cpp.s
+
+.PHONY : tests/utils_tests/util_tests_main.s
+
+# target to generate assembly for a file
+tests/utils_tests/util_tests_main.cpp.s:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_tests/util_tests_main.cpp.s
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/tests/utils_tests/util_tests_main.cpp.s
+.PHONY : tests/utils_tests/util_tests_main.cpp.s
+
+tests/utils_tests/vartree_test.o: tests/utils_tests/vartree_test.cpp.o
+
+.PHONY : tests/utils_tests/vartree_test.o
+
+# target to build an object file
+tests/utils_tests/vartree_test.cpp.o:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_tests/vartree_test.cpp.o
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/tests/utils_tests/vartree_test.cpp.o
+.PHONY : tests/utils_tests/vartree_test.cpp.o
+
+tests/utils_tests/vartree_test.i: tests/utils_tests/vartree_test.cpp.i
+
+.PHONY : tests/utils_tests/vartree_test.i
+
+# target to preprocess a source file
+tests/utils_tests/vartree_test.cpp.i:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_tests/vartree_test.cpp.i
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/tests/utils_tests/vartree_test.cpp.i
+.PHONY : tests/utils_tests/vartree_test.cpp.i
+
+tests/utils_tests/vartree_test.s: tests/utils_tests/vartree_test.cpp.s
+
+.PHONY : tests/utils_tests/vartree_test.s
+
+# target to generate assembly for a file
+tests/utils_tests/vartree_test.cpp.s:
+	$(MAKE) -f CMakeFiles/utils_tests.dir/build.make CMakeFiles/utils_tests.dir/tests/utils_tests/vartree_test.cpp.s
+	$(MAKE) -f CMakeFiles/codeToTest.dir/build.make CMakeFiles/codeToTest.dir/tests/utils_tests/vartree_test.cpp.s
+.PHONY : tests/utils_tests/vartree_test.cpp.s
 
 # Help Target
 help:
@@ -267,6 +338,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... sat_solver"
+	@echo "... utils_tests"
+	@echo "... codeToTest"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -276,12 +349,15 @@ help:
 	@echo "... src/utils/llist.o"
 	@echo "... src/utils/llist.i"
 	@echo "... src/utils/llist.s"
-	@echo "... src/utils/prims.o"
-	@echo "... src/utils/prims.i"
-	@echo "... src/utils/prims.s"
 	@echo "... src/utils/vartree.o"
 	@echo "... src/utils/vartree.i"
 	@echo "... src/utils/vartree.s"
+	@echo "... tests/utils_tests/util_tests_main.o"
+	@echo "... tests/utils_tests/util_tests_main.i"
+	@echo "... tests/utils_tests/util_tests_main.s"
+	@echo "... tests/utils_tests/vartree_test.o"
+	@echo "... tests/utils_tests/vartree_test.i"
+	@echo "... tests/utils_tests/vartree_test.s"
 .PHONY : help
 
 

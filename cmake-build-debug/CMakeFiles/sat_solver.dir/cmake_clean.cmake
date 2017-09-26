@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/sat_solver.dir/main.cpp.o"
   "CMakeFiles/sat_solver.dir/src/formulas/formula.cpp.o"
   "CMakeFiles/sat_solver.dir/src/utils/llist.cpp.o"
-  "CMakeFiles/sat_solver.dir/src/utils/prims.cpp.o"
   "CMakeFiles/sat_solver.dir/src/utils/vartree.cpp.o"
   "sat_solver.pdb"
   "sat_solver"
