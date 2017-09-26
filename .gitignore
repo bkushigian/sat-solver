@@ -1,1 +1,4 @@
 googltest/
+cmake-build-debug/
+*.swp
+.idea/

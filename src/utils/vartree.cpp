@@ -70,3 +70,11 @@ int CNFClauseTree::size() {
     return nodeSize + (left  == nullptr ? 0 : left -> size())
                     + (right == nullptr ? 0 : right-> size());
 }
+
+var *CNFClauseTree::in_order() {
+    int s = size();
+    var* result = new var[s];
+
+
+    return nullptr;
+}

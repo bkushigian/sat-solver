@@ -38,8 +38,25 @@ public:
      * @return  true if this var wasn't tracked already, false otherwise
      */
     bool add_var(var v);
+    /**
+     * @return true if the negated var is present in this node, else false
+     */
     bool neg() { return flags & NEG; }
+
+    /**
+     * @return true if the positive var is present, else true
+     */
     bool pos() { return flags & POS; }
+
+    /**
+     * @return true if both the negated and positive var are present
+     */
+    bool can_cancel() { return neg() && pos(); }
+
+    /**
+     * Recursively find the size of this tree
+     * @return size of the tree
+     */
     int size();
 
     uint64_t get_value() { return value; }
@@ -47,6 +64,7 @@ public:
     CNFClauseTree* get_left(){ return left; }
     CNFClauseTree* get_right() {return right;}
 
+    var* in_order();
 
 };
 
